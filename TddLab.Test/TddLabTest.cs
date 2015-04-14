@@ -43,5 +43,24 @@ namespace TddLab.Test
 
 
         }
+
+        [Fact]
+        public void TestForNuberEntry()
+        {
+            var input = "1st";
+            var engine = new streetName();
+            var answer = engine.GetConsanants(input);
+
+            // answer should be the same sequence as output.
+            var output = new List<char> 
+            {
+                's',
+                't'
+               
+            };
+            Assert.Equal(output, answer);
+
+
+        }
     }
 }
