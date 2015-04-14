@@ -20,5 +20,28 @@ namespace TddLab.Test
 
 
     }
+        [Fact]
+        public void GetTheConsanants()
+        {
+            var input = "Short Phrase";
+            var engine = new streetName(input);
+            var answer = engine.GetConsanants();
+
+            // answer should be the same sequence as output.
+            var output = new List<char> 
+            {
+                'S',
+                'h',
+                'r',
+                't',
+                'P',
+                'h',
+                'r',
+                's'
+            };
+            Assert.Equal(output, answer);
+
+
+        }
     }
 }

@@ -8,5 +8,9 @@ namespace TddLab
 {
     public class streetName
     {
+        public List<char> GetConsanants()
+        {
+
+        }
     }
 }
