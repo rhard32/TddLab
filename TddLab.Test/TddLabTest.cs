@@ -24,8 +24,8 @@ namespace TddLab.Test
         public void GetTheConsanants()
         {
             var input = "Short Phrase";
-            var engine = new streetName(input);
-            var answer = engine.GetConsanants();
+            var engine = new streetName();
+            var answer = engine.GetConsanants(input);
 
             // answer should be the same sequence as output.
             var output = new List<char> 
