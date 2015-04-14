@@ -62,5 +62,30 @@ namespace TddLab.Test
 
 
         }
+
+        [Fact]
+        public void TestGettingConsonantsInOrder()
+        {
+            var input = "Short Phrase 1";
+            var engine = new streetName();
+            var answer = engine.GetAlphabetizedConsantants(input);
+
+            // answer should be the same sequence as output.
+            var output = new List<char> 
+            {
+                'h',
+                'h',
+                'P',
+                'r',
+                'r',
+                'S',
+                's',
+                't'
+               
+            };
+            Assert.Equal(output, answer);
+
+
+        }
     }
 }
