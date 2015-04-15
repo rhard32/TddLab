@@ -66,7 +66,7 @@ namespace TddLab.Test //Tdd Lab 1 Initial
         [Fact] //Lab 1 Question 2 Alphabetizing
         public void TestGettingConsonantsInOrder()
         {
-            var input = "Short Phrase 1";
+            var input = "short phrase 1";
             var engine = new streetName();
             var answer = engine.GetAlphabetizedConsantants(input);
 
@@ -75,10 +75,31 @@ namespace TddLab.Test //Tdd Lab 1 Initial
             {
                 'h',
                 'h',
-                'P',
+                'p',
                 'r',
                 'r',
-                'S',
+                's',
+                's',
+                't'
+               
+            };
+            Assert.Equal(output, answer);
+
+
+        }
+
+        public void TestUniqueConsonants()
+        {
+            var input = "short phrase 1";
+            var engine = new streetName();
+            var answer = engine.GetUniqueConsantants(input);
+
+            // answer should be the same sequence as output.
+            var output = new List<char> 
+            {
+                'h',
+                'p',
+                'r',
                 's',
                 't'
                
