@@ -87,7 +87,7 @@ namespace TddLab.Test //Tdd Lab 1 Initial
 
 
         }
-
+        [Fact]
         public void TestUniqueConsonants()
         {
             var input = "short phrase 1";
