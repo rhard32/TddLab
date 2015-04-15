@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using TddLab;
 
-namespace TddLab.Test
+namespace TddLab.Test //Tdd Lab 1 Initial
 {
     public class TddLabTest
     {
@@ -21,7 +21,7 @@ namespace TddLab.Test
 
     }
         [Fact]
-        public void GetTheConsanants()
+        public void GetTheConsanants() //Tdd Lab 1 Question 1
         {
             var input = "Short Phrase";
             var engine = new streetName();
@@ -45,7 +45,7 @@ namespace TddLab.Test
         }
 
         [Fact]
-        public void TestForNuberEntry()
+        public void TestForNuberEntry() //Tdd Lab 1 Testing for number entry
         {
             var input = "1st";
             var engine = new streetName();
@@ -63,7 +63,7 @@ namespace TddLab.Test
 
         }
 
-        [Fact]
+        [Fact] //Lab 1 Question 2 Alphabetizing
         public void TestGettingConsonantsInOrder()
         {
             var input = "Short Phrase 1";
