@@ -28,22 +28,22 @@ namespace TddLab
         }
         public List<char> GetAlphabetizedConsantants(String input)
         {
-            var constList = new List<char>();
+            var constList = new List<char>(); // puts list in new var so that it can call an outside method
             constList = GetConsanants(input);
 
-           constList.Sort();
+           constList.Sort();//puts in alpha order
            return constList;
                
         }
 
-public List<char> GetUniqueConsantants(String input)
+public List<char> GetUniqueConsantants(String input) //Returns each consonant only once
         {
 
             var uniqueConstList = new List<char>();
             uniqueConstList = GetAlphabetizedConsantants(input);
-            for (int i = 1; i < uniqueConstList.Count; i++)
+            for (int i = 1; i < uniqueConstList.Count; i++) //starts a count so that starting at the second occurrence because the first occurance has nothing to compare
             {
-                if (uniqueConstList[i] == uniqueConstList[i - 1])
+                if (uniqueConstList[i] == uniqueConstList[i - 1]) //actually compares the new occurane to the new occurence
                     uniqueConstList.Remove(uniqueConstList[i]);
             }
             return uniqueConstList;
