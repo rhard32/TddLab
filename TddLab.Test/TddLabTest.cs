@@ -108,5 +108,30 @@ namespace TddLab.Test //Tdd Lab 1 Initial
 
 
         }
+
+        [Fact]
+        public void TestLowerCaseConsonants()
+        {
+            var input = "Short Phrase 1";
+            var engine = new streetName();
+            var answer = engine.GetLowerCaseConsantants(input);
+
+            // answer should be the same sequence as output.
+            var output = new List<char> 
+            {
+                's',
+                'h',
+                'r',
+                't',
+                'p',
+                'h',
+                'r',
+                's'
+               
+            };
+            Assert.Equal(output, answer);
+
+
+        }
     }
 }
