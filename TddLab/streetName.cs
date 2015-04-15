@@ -26,5 +26,17 @@ namespace TddLab
 
             return constList;
         }
+        public List<char> GetAlphabetizedConsantants(String input)
+        {
+            var constList = new List<char>();
+            constList = GetConsanants(input);
+
+           constList.Sort();
+           return constList;
+               
+        }
+
+
+
     }
 }
