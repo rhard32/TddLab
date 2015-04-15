@@ -36,7 +36,18 @@ namespace TddLab
                
         }
 
+public List<char> GetUniqueConsantants(String input)
+        {
 
+            var uniqueConstList = new List<char>();
+            uniqueConstList = GetAlphabetizedConsantants(input);
+            for (int i = 1; i < uniqueConstList.Count; i++)
+            {
+                if (uniqueConstList[i] == uniqueConstList[i - 1])
+                    uniqueConstList.Remove(uniqueConstList[i]);
+            }
+            return uniqueConstList;
+        }
 
     }
 }
