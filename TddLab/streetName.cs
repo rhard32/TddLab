@@ -41,13 +41,24 @@ public List<char> GetUniqueConsantants(String input) //Returns each consonant on
 
             var uniqueConstList = new List<char>();
             uniqueConstList = GetAlphabetizedConsantants(input);
-            for (int i = 1; i < uniqueConstList.Count; i++) //starts a count so that starting at the second occurrence because the first occurance has nothing to compare
+            for (int i = 1; i < uniqueConstList.Count; i++)    //starts a count so that starting at the second occurrence because the first occurance has nothing to compare
             {
-                if (uniqueConstList[i] == uniqueConstList[i - 1]) //actually compares the new occurane to the new occurence
+                if (uniqueConstList[i] == uniqueConstList[i - 1])      //actually compares the new occurane to the new occurence
                     uniqueConstList.Remove(uniqueConstList[i]);
             }
             return uniqueConstList;
         }
+public List<char> GetLowerCaseConsantants(String input)
+{
+    var lowerConstList = new List<char>(); //creats new instance of lowerConstList
+    lowerConstList = GetConsanants(input);  //calls the GetConsanants from outside the method
+    for (int i = 0; i < lowerConstList.Count; i++)
 
+    {
+        lowerConstList[i] = Char.ToLower(lowerConstList[i]); //changes to lowercase
+    }
+    return lowerConstList;
+
+}
     }
 }
